@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Clientes {
+public class Pessoalista {
 
     private ArrayList<Pessoa> pessoa;
 
-    public Clientes() {
+    public Pessoalista() {
         this.pessoa = new ArrayList<>();
     }
 
@@ -13,19 +13,19 @@ public class Clientes {
         pessoa.add(person);
     }
 
-   public String get_all_taxes () {
+   public String GetAllTaxes () {
 
-        double client_taxes = 0;
+        double ClientTaxes = 0;
 
         for (int i = 0; i < pessoa.size(); i++)
         {
-            client_taxes += pessoa.get(i).tax();
+            ClientTaxes += pessoa.get(i).tax();
         }
 
-        return "TOTAL TAXES: $ " + String.format("%.2f",client_taxes);
+        return "TOTAL TAXES: $ " + String.format("%.2f",ClientTaxes);
     }
 
-    public String get_tax_list() {
+    public String GetTaxList() {
         String lista = "TAXES PAID:\n";
         for (int i = 0; i < pessoa.size(); i++)
         {
