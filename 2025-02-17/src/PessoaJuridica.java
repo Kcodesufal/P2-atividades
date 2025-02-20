@@ -1,8 +1,8 @@
-class Pessoa_Juridica extends Pessoa {
+class PessoaJuridica extends Pessoa {
 
     private int workers;
 
-    Pessoa_Juridica(double Anual_income, String name, int workers) {
+    PessoaJuridica(double Anual_income, String name, int workers) {
 
         super(Anual_income, name);
         this.workers = workers;

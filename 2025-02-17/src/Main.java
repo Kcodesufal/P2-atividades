@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
-        Clientes Client = new Clientes();
+        RegistrodePessoas taxpayerslist = new RegistrodePessoas();
         System.out.println("Enter the number of tax payers:");
         int taxpayers = sc.nextInt();
 
@@ -20,20 +20,22 @@ public class Main {
             if (persontype.equals("i")) {
                 System.out.println("Health expenditures: ");
                 double health_expenses = sc.nextDouble();
-                Pessoa p = new Pessoa_Fisica(anual_income, name, health_expenses);
-                Client.addPessoa(p);
+                Pessoa p = new PessoaFisica(anual_income, name, health_expenses);
+                taxpayerslist.addPessoa(p);
 
             } else if (persontype.equals("c")) {
 
                 System.out.println("Number of employees: ");
                 int workers = sc.nextInt();
-                Pessoa p = new Pessoa_Juridica(anual_income, name, workers);
-                Client.addPessoa(p);
+                Pessoa p = new PessoaJuridica(anual_income, name, workers);
+                taxpayerslist.addPessoa(p);
             }
 
         }
-        System.out.println(Client.get_tax_list());
-        System.out.println(Client.get_all_taxes());
+        System.out.println(taxpayerslist.GetTaxList());
+        System.out.println(taxpayerslist.PrintAllTaxes());
+
+        System.out.println();
         sc.close();
     }
 }
