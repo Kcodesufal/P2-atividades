@@ -49,4 +49,19 @@ public class ShoppingCart {
         }
         return total;
     }
+
+
+@Override
+public String toString ()
+{
+
+    StringBuilder sb = new StringBuilder();
+    sb.append("ID:" + getCustomerID() + "\nLista de Produtos do Carrinho:\n");
+    for (Product p : product) {
+
+        sb.append(p.toString()).append("\n");
+    }
+
+    return sb.toString();
+}
 }
