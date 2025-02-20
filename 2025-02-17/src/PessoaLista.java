@@ -15,14 +15,14 @@ public class PessoaLista {
 
    public String GetAllTaxes () {
 
-        double ClientTaxes = 0;
+        double TotalTax = 0;
 
         for (int i = 0; i < pessoa.size(); i++)
         {
-            ClientTaxes += pessoa.get(i).tax();
+            TotalTax += pessoa.get(i).tax();
         }
 
-        return "TOTAL TAXES: $ " + String.format("%.2f",ClientTaxes);
+        return "TOTAL TAXES: $ " + String.format("%.2f",TotalTax);
     }
 
     public String GetTaxList() {
