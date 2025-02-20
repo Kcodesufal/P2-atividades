@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Pessoalista {
+public class PessoaLista {
 
     private ArrayList<Pessoa> pessoa;
 
-    public Pessoalista() {
+    public PessoaLista() {
         this.pessoa = new ArrayList<>();
     }
 
